@@ -1,0 +1,13 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <input type="email" name="email" placeholder="ender e-mail" formControlName="email">
+    <br>
+    <span *ngIf="email && email.invalid">Enter a valid e-mail</span>
+    <br>
+    <br>
+    <input type="password" name="password" placeholder="enter password" formControlName="password"/>
+    <br>
+    <span *ngIf="password && password.invalid">Enter a valid password</span>
+    <br>
+    <br>
+    <button [disabled]="loginForm.invalid">Sign In</button>
+</form>

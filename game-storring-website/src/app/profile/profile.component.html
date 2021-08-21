@@ -1,0 +1,18 @@
+<form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+    <input type="text" name="user" placeholder="enter username" formControlName="user"/>
+    <br>
+    <span *ngIf="user && user.invalid">Enter a valid username</span>
+    <br>
+    <br>
+    <input type="email" name="email" placeholder="ender e-mail" formControlName="email">
+    <br>
+    <span *ngIf="email && email.invalid">Enter a valid e-mail</span>
+    <br>
+    <br>
+    <input type="text" name="age" placeholder="enter age" formControlName="age"/>
+    <br>
+    <span *ngIf="age && age.invalid">Enter a valid age</span>
+    <br>
+    <br>
+    <button [disabled]="profileForm.invalid">Sign In</button>
+</form>
