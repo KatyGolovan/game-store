@@ -1,1 +1,12 @@
-<p>games works!</p>
+<input type="search" [(ngModel)]="search">
+
+<div *ngFor="let f of (game | search:search) as folder">
+  {{f.name}}
+  {{f.price}}
+  {{f.description}}
+
+</div>
+
+<div *ngIf="(game | search:search).length < 1">
+  Not Found
+  </div>

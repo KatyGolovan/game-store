@@ -10,6 +10,8 @@ import { GamesComponent } from './games/games.component';
 import { LibraryComponent } from './library/library.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
+import { GameComponent } from './games/game/game.component';
+import { SearchPipe } from './games/search.pipe';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ProfileComponent } from './profile/profile.component';
     GamesComponent,
     LibraryComponent,
     FriendsComponent,
-    ProfileComponent
+    ProfileComponent,
+    GameComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

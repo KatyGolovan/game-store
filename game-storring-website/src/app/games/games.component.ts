@@ -12,4 +12,12 @@ export class GamesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  game = [
+    {
+      name: this.name,
+      price: this.price,
+      description: this.description,
+    }
+  ]
+  search = '';
 }
