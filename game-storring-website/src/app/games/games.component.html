@@ -1,12 +1,16 @@
-<input type="search" [(ngModel)]="search">
-
-<div *ngFor="let f of (game | search:search) as folder">
-  {{f.name}}
-  {{f.price}}
-  {{f.description}}
-
-</div>
-
-<div *ngIf="(game | search:search).length < 1">
-  Not Found
+<div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Games</label>
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Search Games" 
+          autofocus>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <li class="list-group-item" *ngFor="let c of game | search: searchText">
+          {{c}}
+        </li>
+      </ul>
+    </div>
   </div>

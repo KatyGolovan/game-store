@@ -1,0 +1,9 @@
+div{
+    width: 30%;
+    padding: 10px;
+    border: solid black thin;
+}
+li{
+    margin: 5px;
+    border: solid black thin;
+}

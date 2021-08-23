@@ -1,1 +1,16 @@
-<p>friends works!</p>
+<div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Friends</label>
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Search Friends" 
+          autofocus>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <li class="list-group-item" *ngFor="let c of friends | searchFriends: searchText">
+          {{c}}
+        </li>
+      </ul>
+    </div>
+  </div>

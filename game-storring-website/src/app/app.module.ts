@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GameComponent } from './games/game/game.component';
 import { SearchPipe } from './games/search.pipe';
+import { SearchFriendsPipe } from './friends/search-friends.pipe';
 
 
 @NgModule({
@@ -24,12 +25,14 @@ import { SearchPipe } from './games/search.pipe';
     FriendsComponent,
     ProfileComponent,
     GameComponent,
-    SearchPipe
+    SearchPipe,
+    SearchFriendsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

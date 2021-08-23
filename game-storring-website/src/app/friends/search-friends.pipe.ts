@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'searchFriends'
 })
-export class SearchPipe implements PipeTransform {
+export class SearchFriendsPipe implements PipeTransform {
 
   transform(items: any[], searchText: string): any[] {
     if (!items) {
@@ -18,5 +18,4 @@ export class SearchPipe implements PipeTransform {
       return it.toLocaleLowerCase().includes(searchText);
     });
   }
-
 }

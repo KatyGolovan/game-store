@@ -11,12 +11,13 @@ export class GamesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  searchText = '';
+  //to be changed!!!!
   game = [
     {
-      name: this.name,
-      price: this.price,
-      description: this.description,
+      name: 'this.name',
+      price: 'this.price',
+      description: 'this.description',
     }
   ]
   search = '';

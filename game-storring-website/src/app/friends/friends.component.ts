@@ -11,5 +11,16 @@ export class FriendsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  searchText = '';
+  //to be changed!!!!!!
+  friends = [
+    'Ant-Man',
+    'Aquaman',
+    'Asterix',
+    'The Atom',
+    'The Avengers',
+    'Batgirl',
+    'Batman',
+    'Batwoman',
+  ]
 }
